@@ -24,5 +24,8 @@ func main() {
 	myslice3 := arr1[0:3]
 	fmt.Printf("myslice = %v\n", myslice3)
 	fmt.Printf("length = %d\n", len(myslice3))
-	fmt.Printf("cap = %d", cap(myslice3))
+	fmt.Printf("cap = %d\n", cap(myslice3))
+
+	myslice2 = append(myslice2, "now")
+	fmt.Println(myslice2)
 }
