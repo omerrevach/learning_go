@@ -19,7 +19,17 @@ type Person struct {
 	salary int
 }
 
+type gasEngine struct {
+	mpg uint8
+	gallons uint8
+}
+
 func main() {
+
+	var myEngine gasEngine
+	myEngine.mpg = 20
+	fmt.Println(myEngine.mpg)
+
 	var person1 Person
 	var person2 Person
 
@@ -35,7 +45,7 @@ func main() {
 	person2.job = "Homeless"
 	person2.salary = 50000
 
-	fmt.Println("Name: ", person1.name)
+	fmt.Println("\nName: ", person1.name)
 	fmt.Println("Age: ", person1.age)
 	fmt.Println("Job: ", person1.job)
 	fmt.Println("Salary: ", person1.salary)
