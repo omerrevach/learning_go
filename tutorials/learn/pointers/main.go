@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+var pl = fmt.Println
+
+
 // When to use pointers
 // 1. When we need to update the state
 
@@ -27,6 +30,10 @@ func changeValue(str *string) {
 
 func changedValue2(str string) {
 	str = "change"
+}
+
+func changeVal(myPtr*int)  {
+	*myPtr = 12
 }
 
 func main() {
@@ -53,5 +60,20 @@ func main() {
 
 	changeValue(&toChange) // This will change it because its pointing and changing its location in memory 
 	fmt.Println(toChange)
+
+
+
+
+	f4 := 5
+	var f4Ptr *int = &f4
+	pl("f4 address: ", f4Ptr)
+	pl("f4 value: ", *f4Ptr)
+	*f4Ptr = 11
+	pl("f4 value: ", *f4Ptr)
+
+
+	pl("f4 before the func: ", f4)
+	changeVal(&f4)
+	pl("f4 after the func: ", f4)
 }
 
